@@ -1,3 +1,5 @@
+Co-authored by Sarah Andyshak and Mesha Devan
+
 Describe: wordCounter()
 
 Test: "It should return 1 if a passage has just one word."
@@ -67,3 +69,14 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Describe: omitOffense() <!-- began working on this, couldn't finish -->
+
+Test: "It should return 0 occurrences of a word for an empty string."
+Code:
+const text = "";
+const word = "zoinks";
+omitOffense(word,text);
+Expected Output: 0
+
+Test: "It should return 1 occurrence of a word when the word and the text are the same."
