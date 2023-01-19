@@ -8,24 +8,29 @@ function wordCounter(text) {
   const textArray = text.split(" ");
   textArray.forEach(function(element) {
     if (!Number(element)) {
-    wordCount++;
+      wordCount++;
     }
   });
   return wordCount;
 }
 
-function numberOfOccurrencesInText(word,text) {
+//Had to hadd if(word.trim)... below in order to solve bug re: empty strings 
+function numberOfOccurrencesInText(word, text) {
+  if (word.trim().length === 0) {
+    return 0;
+  }
   const textArray = text.split(" ");
-  let wordCount = 0;workbench.trust.manage
+  let wordCount = 0;
   textArray.forEach(function(element) {
     if (element.toLowerCase().includes(word.toLowerCase())) {
-      wordCount++
+      wordCount++;
     }
   });
   return wordCount;
 }
 
-// UI Logic
+// UI Logic -- below, even.preventDefault() is crossed out?
+
 function handleFormSubmission() {
   event.preventDefault();
   const passage = document.getElementById("text-passage").value;

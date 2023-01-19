@@ -70,7 +70,7 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
-Describe: omitOffense() <!-- began working on this, couldn't finish -->
+<!-- Describe: omitOffense()
 
 Test: "It should return 0 occurrences of a word for an empty string."
 Code:
@@ -79,4 +79,11 @@ const word = "zoinks";
 omitOffense(word,text);
 Expected Output: 0
 
-Test: "It should return 1 occurrence of a word when the word and the text are the same."
+Test: "It should return 1 occurrence of a word when the word and the text are the same." -->
+
+Test: "If an empty string is passed in as a word, it should return 0."
+Code:
+const word = "";
+const text = "red RED Red!";
+numberOfOccurrencesInText(word, text);
+Expected Output: 0
